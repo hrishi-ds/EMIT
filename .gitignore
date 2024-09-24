@@ -1,4 +1,9 @@
 /data/*
-!/data/**/
-data/**/*
-!data/**/.gitkeep
+!/data/*/
+!/data/*/.gitkeep
+/data/pre_processed/*
+!/data/pre_processed/.gitkeep
+/data/pre_training/*
+!/data/pre_training/.gitkeep
+/data/raw/*
+!/data/raw/.gitkeep
