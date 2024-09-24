@@ -10,7 +10,7 @@ EMIT is a framework designed for event-based masked auto-encoding applied to irr
 
 ## Codebase Structure
 ```
-EMIT
+emit
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -36,20 +36,20 @@ EMIT
 ├── results
 │   ├── MIMIC
 │   │   └── EMIT_MIMIC_PT_lr_0.0005_err_coef_8_mask_threshold_0.001_insig_prob_0.4_FT_batchsize32_dropout0.4_lr5e-05_weight_decay0.0001.pkl
-│   └── PHYSIONET
-│       └── EMIT_PHYSIONET_PT_lr_0.0005_err_coef_3_mask_threshold_0.01_insig_prob_0.7_FT_batchsize32_dropout0.4_lr5e-05_weight_decay0.0001.pkl
-├── results_notebook.ipynb
-└── scripts
-    ├── finetune_mimic.sh
-    ├── finetune_physionet.sh
-    ├── get_event_masks_mimic.sh
-    ├── get_event_masks_physionet.sh
-    ├── get_pretraining_data_mimic.sh
-    ├── get_pretraining_data_physionet.sh
-    ├── preprocess_mimic.sh
-    ├── preprocess_physionet.sh
-    ├── pretrain_mimic.sh
-    └── pretrain_physionet.sh
+│   ├── PHYSIONET
+│   │   └── EMIT_PHYSIONET_PT_lr_0.0005_err_coef_3_mask_threshold_0.01_insig_prob_0.7_FT_batchsize32_dropout0.4_lr5e-05_weight_decay0.0001.pkl
+│   └── results_notebook.ipynb
+├── scripts
+│   ├── finetune_mimic.sh
+│   ├── finetune_physionet.sh
+│   ├── get_event_masks_mimic.sh
+│   ├── get_event_masks_physionet.sh
+│   ├── get_pretraining_data_mimic.sh
+│   ├── get_pretraining_data_physionet.sh
+│   ├── preprocess_mimic.sh
+│   ├── preprocess_physionet.sh
+│   ├── pretrain_mimic.sh
+│   └── pretrain_physionet.sh
 └── src
     ├── __init__.py
     ├── data_preprocessing
@@ -62,7 +62,7 @@ EMIT
     │   ├── __pycache__
     │   │   ├── finetune_mimic.cpython-310.pyc
     │   │   └── finetune_physionet.cpython-310.pyc
-    │   └── finetune_mimic.py
+    │   ├── finetune_mimic.py
     │   └── finetune_physionet.py
     ├── model.py
     ├── pretraining
@@ -74,6 +74,7 @@ EMIT
     └── pretraining_data_preparation
         ├── get_pretraining_data_mimic_iii.py
         └── get_pretraining_data_physionet_2012.py
+
 ```
 
 ## Usage
