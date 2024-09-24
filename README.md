@@ -1,3 +1,7 @@
+### TODO 
+- [ ] Task 1: Put arXiv link
+- [ ] Task 2: Put paper citation
+
 # EMIT (Event-Based Masked Auto-Encoding for Irregular Time Series)
 
 Code for EMIT paper (ICDM 2024) <br>
@@ -134,6 +138,13 @@ Results from model finetuning can be found in the `results/` directory.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## Cite
+If you find this repo useful, please cite
+
+```
+Placeholder for citation
+```
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
