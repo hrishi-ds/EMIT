@@ -1,4 +1,0 @@
-# Ignore contents of the data subdirectories
-data/raw/*
-data/pre_processed/*
-data/pre_training/*
