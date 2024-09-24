@@ -1,0 +1,59 @@
+# Path to the pretraining dataset.
+data_path: './data/pre_training/pretraining_data_mimic_iii_880.npz'
+
+# Threshold for determining significant events during masking.
+mask_threshold: 0.001
+
+# Probability of marking insignificant events during masking.
+insignificant_prob: 0.4
+
+# Path to the precomputed event masks for pretraining with the specified threshold and probability.
+mask_path: './data/pre_training/mimic_event_masks_threshold_${mask_threshold}_insignificant_prob_${insignificant_prob}.npz'
+
+# Batch size for training during pretraining.
+batch_size: 256
+
+# Learning rate for the pretraining process.
+learning_rate: 0.0005
+
+# Number of training epochs for pretraining.
+epochs: 100
+
+# Number of epochs to wait before stopping training if validation performance doesn't improve (early stopping).
+patience: 5
+
+# Maximum sequence length for the input time series data during pretraining.
+max_len: 880
+
+# Number of unique variables/features in the dataset.
+V: 129
+
+# Dimensionality of the input data embedding.
+d: 50
+
+# Number of transformer encoder blocks in the model.
+N: 2
+
+# Number of attention heads in the model's multi-head attention mechanism.
+he: 4
+
+# Dropout rate used for regularization during pretraining to prevent overfitting.
+dropout: 0.2
+
+# Weight decay coefficient for L2 regularization
+weight_decay: 0
+
+# Coefficient used for weighing the error from the masked events during pretraining.
+error_coefficient: 8
+
+# Number of samples to be processed per epoch during pretraining.
+samples_per_epoch: 102400
+
+
+# Filename pattern for saving the pretrained model
+model_name: './pretrained_models/MIMIC/EMIT_MIMIC_PT_lr_${learning_rate}_err_coef_${error_coefficient}_mask_threshold_${mask_threshold}_insig_prob_${insignificant_prob}'
+
+# Configuration for logging using Hydra. 
+hydra:
+  run:
+    dir: './logs/hydra_logs/MIMIC/PT/EMIT_MIMIC_PT_lr_${learning_rate}_err_coef_${error_coefficient}_mask_threshold_${mask_threshold}_insig_prob_${insignificant_prob}/${now:%H-%M-%S}'
