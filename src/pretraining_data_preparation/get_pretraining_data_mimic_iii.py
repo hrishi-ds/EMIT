@@ -5,7 +5,6 @@ import pandas as pd
 import pickle
 from tqdm import tqdm
 
-
 pred_window = 2 # hours
 obs_windows = range(20, 124, 4)
 
