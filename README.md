@@ -4,10 +4,14 @@
 
 # EMIT (Event-Based Masked Auto-Encoding for Irregular Time Series)
 
-Code for EMIT paper (ICDM 2024) <br>
-Title :  Event-Based Masked Auto-Encoding for Irregular Time Series <br>
-Paper link : <font color="red">(PLACEHOLDER ARXIV LINK)</font> <br>
-Authors : Hrishikesh Patel, Ruihong Qiu, Adam Irwin, Shazia Sadiq, Sen Wang
+Code for EMIT paper (ICDM 2024)
+
+**Title:** Event-Based Masked Auto-Encoding for Irregular Time Series
+
+**Paper link:** <font color="red">(PLACEHOLDER ARXIV LINK)</font>
+
+**Authors:** Hrishikesh Patel, Ruihong Qiu, Adam Irwin, Shazia Sadiq, Sen Wang
+
 
 ## Overview
 EMIT is a framework designed for event-based masked auto-encoding applied to irregular time series data. This project aims to improve model pretraining using event masking techniques. The framework includes scripts for preprocessing, event mask generation, and model training on various datasets, including MIMIC and PHYSIONET.
