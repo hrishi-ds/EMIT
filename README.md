@@ -8,6 +8,76 @@ Authors : Hrishikesh Patel, Ruihong Qiu, Adam Irwin, Shazia Sadiq, Sen Wang
 ## Overview
 EMIT is a framework designed for event-based masked auto-encoding applied to irregular time series data. This project aims to improve model pretraining using event masking techniques. The framework includes scripts for preprocessing, event mask generation, and model training on various datasets, including MIMIC and PHYSIONET.
 
+## Codebase Structure
+```
+EMIT
+├── .gitignore
+├── LICENSE
+├── README.md
+├── config
+│   ├── ft_config_mimic.yaml
+│   ├── ft_config_physionet.yaml
+│   ├── pt_config_mimic.yaml
+│   └── pt_config_physionet.yaml
+├── data
+│   ├── .gitkeep
+│   ├── pre_processed
+│   │   └── .gitkeep
+│   ├── pre_training
+│   │   └── .gitkeep
+│   └── raw
+│       └── .gitkeep
+├── environment.yml
+├── pretrained_models
+│   ├── MIMIC
+│   │   └── EMIT_MIMIC_PT_lr_0.0005_err_coef_8_mask_threshold_0.001_insig_prob_0.4.h5
+│   └── PHYSIONET
+│       └── EMIT_PHYSIONET_PT_lr_0.0005_err_coef_3_mask_threshold_0.01_insig_prob_0.7.h5
+├── results
+│   ├── MIMIC
+│   │   └── EMIT_MIMIC_PT_lr_0.0005_err_coef_8_mask_threshold_0.001_insig_prob_0.4_FT_batchsize32_dropout0.4_lr5e-05_weight_decay0.0001.pkl
+│   └── PHYSIONET
+│       └── EMIT_PHYSIONET_PT_lr_0.0005_err_coef_3_mask_threshold_0.01_insig_prob_0.7_FT_batchsize32_dropout0.4_lr5e-05_weight_decay0.0001.pkl
+├── results_notebook.ipynb
+└── scripts
+    ├── finetune_mimic.sh
+    ├── finetune_physionet.sh
+    ├── get_event_masks_mimic.sh
+    ├── get_event_masks_physionet.sh
+    ├── get_pretraining_data_mimic.sh
+    ├── get_pretraining_data_physionet.sh
+    ├── preprocess_mimic.sh
+    ├── preprocess_physionet.sh
+    ├── pretrain_mimic.sh
+    └── pretrain_physionet.sh
+└── src
+    ├── __init__.py
+    ├── data_preprocessing
+    │   ├── preprocess_mimic_iii.py
+    │   └── preprocess_physionet_2012.py
+    ├── event_masks
+    │   ├── generate_event_masks_mimic_iii.py
+    │   └── generate_event_masks_physionet_2012.py
+    ├── finetuning
+    │   ├── __pycache__
+    │   │   ├── finetune_mimic.cpython-310.pyc
+    │   │   └── finetune_physionet.cpython-310.pyc
+    │   └── finetune_mimic.py
+    │   └── finetune_physionet.py
+    ├── model.py
+    ├── pretraining
+    │   ├── __pycache__
+    │   │   ├── pretrain_mimic.cpython-310.pyc
+    │   │   └── pretrain_physionet.cpython-310.pyc
+    │   ├── pretrain_mimic.py
+    │   └── pretrain_physionet.py
+    └── pretraining_data_preparation
+        ├── get_pretraining_data_mimic_iii.py
+        └── get_pretraining_data_physionet_2012.py
+```
+
+## Usage
+
 ### Environment Setup
 Clone the repository and then run the following in terminal.
 ```
@@ -61,10 +131,10 @@ The finetuning configurations can be modified from the `config/ft_config_physion
 ### Results
 Results from model finetuning can be found in the `results/` directory.
 
-### Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit issues or pull requests.
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
