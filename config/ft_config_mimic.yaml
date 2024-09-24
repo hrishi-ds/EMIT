@@ -1,0 +1,59 @@
+# Path to the preprocessed MIMIC-III dataset.
+data_path: './data/pre_processed/mimic_iii_preprocessed.pkl'
+
+# Pretrained model to be finetuned.
+pt_model: 'EMIT_MIMIC_PT_lr_0.0005_err_coef_8_mask_threshold_0.001_insig_prob_0.4'
+
+# Path to the pretrained model weights
+pt_model_weights_path: './pretrained_models/MIMIC/${pt_model}.h5'
+
+# Number of training epochs for fine-tuning.
+epochs: 100
+
+# List of percentage of labeled data to be used for fine-tuning
+lds: [10, 20, 30, 40, 50]
+
+# Number of times to repeat each experiment
+repeats: 5
+
+# Maximum sequence length for the time series input 
+# same as pretrained model
+max_seq_length: 880
+
+# Number of unique variables/features in the dataset.
+V: 129
+
+# Dimensionality of the input data embedding.
+d: 50
+
+# Number of transformer encoder blocks in the model.
+N: 2
+
+# Number of attention heads in the model's multi-head attention mechanism.
+he: 4
+
+# Dropout rate used for regularization to prevent overfitting.
+dropout: 0.4
+
+# Batch size for training the model.
+batch_size: 32
+
+# Learning rate for fine-tuning the model.
+learning_rate: 0.00005
+
+# Number of epochs to wait before stopping training if validation performance doesn't improve (early stopping).
+patience: 10
+
+# Weight decay coefficient for L2 regularization.
+weight_decay: 0.0001
+
+# Filename pattern for the model
+file_name : '${pt_model}_FT_batchsize${batch_size}_dropout${dropout}_lr${learning_rate}_weight_decay${weight_decay}'
+
+# Path to save the fine-tuning results in a pickle file
+results_path: './results/MIMIC/${file_name}.pkl'
+
+# Configuration for logging using Hydra. 
+hydra:
+  run:
+    dir: './logs/hydra_logs/MIMIC/FT/${file_name}/${now:%H-%M-%S}'
