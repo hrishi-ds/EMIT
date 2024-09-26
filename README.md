@@ -1,14 +1,10 @@
-### TODO 
-- [ ] Task 1: Put arXiv link
-- [ ] Task 2: Put paper citation
-
 # EMIT (Event-Based Masked Auto-Encoding for Irregular Time Series)
 
 Code for EMIT paper (ICDM 2024)
 
 **Title:** Event-Based Masked Auto-Encoding for Irregular Time Series
 
-**Paper link:** <font color="red">(PLACEHOLDER ARXIV LINK)</font>
+**Paper link:** https://arxiv.org/abs/2409.16554
 
 **Authors:** Hrishikesh Patel, Ruihong Qiu, Adam Irwin, Shazia Sadiq, Sen Wang
 
@@ -147,7 +143,17 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 If you find this repo useful, please cite
 
 ```
-Placeholder for citation
+@article{EMIT,
+  author       = {Hrishikesh Patel and
+                  Ruihong Qiu and
+                  Adam Irwin and
+                  Shazia Sadiq and
+                  Sen Wang},
+  title        = {Event-Based Masked Auto-Encoding for Irregular Time Series},
+  journal      = {CoRR},
+  volume       = {abs/2409.16554},
+  year         = {2024}
+}
 ```
 
 ## License
