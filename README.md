@@ -14,7 +14,7 @@ EMIT is a framework designed for event-based masked auto-encoding applied to irr
 
 ## Codebase Structure
 ```
-emit
+EMIT
 ├── .gitignore
 ├── LICENSE
 ├── README.md
