@@ -2,7 +2,7 @@
 
 Code for EMIT paper (ICDM 2024)
 
-**Title:** Event-Based Masked Auto-Encoding for Irregular Time Series
+**Title:** EMIT- Event-Based Masked Auto Encoding for Irregular Time Series
 
 **Paper link:** https://arxiv.org/abs/2409.16554
 
@@ -149,7 +149,7 @@ If you find this repo useful, please cite
                   Adam Irwin and
                   Shazia Sadiq and
                   Sen Wang},
-  title        = {Event-Based Masked Auto-Encoding for Irregular Time Series},
+  title        = {EMIT- Event-Based Masked Auto Encoding for Irregular Time Series},
   journal      = {CoRR},
   volume       = {abs/2409.16554},
   year         = {2024}
